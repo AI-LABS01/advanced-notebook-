@@ -23,8 +23,7 @@ pypdf>=5.0.0
 docx2txt>=0.8
 tiktoken>=0.7.0
 langchain-pymupdf4llm
-beautifulsoup4
-html2text
+trafilatura
 
 # --- Environment & Utilities ---
 python-dotenv>=1.0.1
