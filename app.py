@@ -7,12 +7,13 @@ from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI(title="Research Index Stack Engine API")
 
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origin=["*"],
-    allow_credentials =True,
-    allow_methods =["*"],
-    allow_headers = ["*"] 
+    allow_origins=["*"], 
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 
