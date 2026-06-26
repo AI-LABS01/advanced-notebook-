@@ -11,7 +11,7 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
-BACKEND_URL = https://advanced-notebook-1.onrender.com/
+BACKEND_URL = "https://advanced-notebook-1.onrender.com/"
 
 # ----------------------------------------------------------------------------
 # 2. Theme — full dark
