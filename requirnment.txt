@@ -29,3 +29,8 @@ trafilatura
 python-dotenv>=1.0.1
 requests>=2.32.0
 pydantic>=2.0.0
+
+# --- File Uploads & OCR ---
+python-multipart
+pytesseract
+Pillow
