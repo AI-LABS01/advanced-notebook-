@@ -11,7 +11,7 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
-BACKEND_URL = "https://advanced-notebook-1.onrender.com/"
+BACKEND_URL = "https://advanced-notebook-1.onrender.com"
 
 # ----------------------------------------------------------------------------
 # 2. Theme — full dark
@@ -505,7 +505,7 @@ with left:
 # ----------------------------------------------------------------------------
 if st.session_state.chat_history and st.session_state.chat_history[-1]["role"] == "user":
     last_query = st.session_state.chat_history[-1]["content"]
-    
+
     with left:
         with st.chat_message("assistant"):
             st.markdown('<span class="chat-tag assistant">ASSISTANT</span>', unsafe_allow_html=True)
@@ -518,11 +518,11 @@ if st.session_state.chat_history and st.session_state.chat_history[-1]["role"] =
                         data = response.json()
                         answer = data.get("answer", "No answer string parsed.")
                         sources = data.get("sources", [])
-                        
+
                         # Format source attribution if valid matching objects exist
                         if sources:
                             answer += f"\n\n**Sources:** {', '.join(sources)}"
-                        
+
                         st.session_state.chat_history.append({"role": "assistant", "content": answer})
                         st.rerun()
                     else:
@@ -555,11 +555,11 @@ with right:
         unsafe_allow_html=True,
     )
     st.markdown(
-        """
+        f"""
         <div class="panel">
             <p class="sidebar-eyebrow" style="color:#A7ACB6 !important;">BACKEND</p>
             <p style="font-family:'IBM Plex Mono'; font-size:0.85rem; margin:0; color:#EDEEF0 !important; font-weight:600;">
-                127.0.0.1:8000
+                {BACKEND_URL.replace("https://", "")}
             </p>
         </div>
         """,
