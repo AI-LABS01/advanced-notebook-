@@ -52,3 +52,8 @@ def query_knowledge_base(payload: QueryRequest):
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
             detail=f"An unhandled execution crash occurred during query processing: {str(e)}"
         )
+
+
+@app.get("/")
+def read_root():
+    return {"status": "healthy", "message": "Advanced Notebook AI Agent API is live!"}
