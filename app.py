@@ -2,8 +2,18 @@
 from fastapi import FastAPI, HTTPException, status
 from schemas.ingest_schemas import DocumentIngestSchemas, QueryRequest
 from services import process_and_store_document, search_and_generate_answer
+from fastapi.middleware.cors import CORSMiddleware
+
 
 app = FastAPI(title="Research Index Stack Engine API")
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origin=["*"],
+    allow_credentials =True,
+    allow_methods =["*"],
+    allow_headers = ["*"] 
+)
 
 
 @app.post("/ingest", status_code=status.HTTP_200_OK)
