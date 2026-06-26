@@ -2,37 +2,30 @@
 langchain>=0.3.0
 langchain-core>=0.3.0
 langchain-community>=0.3.0
-langgraph>=0.2.0          
+langchain-text-splitters>=0.3.0
+langgraph>=0.2.0
 
-# --- LLM Integration (Hugging Face) ---
-langchain-huggingface>=0.1.0
-huggingface_hub>=0.24.0
-
-# --- Vector Database & RAG Storage ---
-chromadb>=0.5.0           
-
-# --- Document Loaders & Text Splitting ---
-pypdf>=5.0.0              
-docx2txt>=0.8             
-tiktoken>=0.7.0           # <--- Fixed the spelling here with a 'k'
-
-
-# --- Environment & Utilities ---
-python-dotenv>=1.0.1
-requests>=2.32.0
+# --- Web Server ---
 fastapi
-
-# --- Vector Database & RAG Storage ---
-chromadb>=0.5.0           
-langchain-chroma
+uvicorn[standard]
 
 # --- LLM Integration (Hugging Face / Mistral) ---
 langchain-huggingface>=0.1.0
 huggingface_hub>=0.24.0
 langchain-mistralai
 
+# --- Vector Database & RAG Storage ---
+chromadb>=0.5.0
+langchain-chroma
+
 # --- Document Loaders & Text Splitting ---
-pypdf>=5.0.0              
-docx2txt>=0.8             
-tiktoken>=0.7.0           
+pypdf>=5.0.0
+docx2txt>=0.8
+tiktoken>=0.7.0
 langchain-pymupdf4llm
+beautifulsoup4
+
+# --- Environment & Utilities ---
+python-dotenv>=1.0.1
+requests>=2.32.0
+pydantic>=2.0.0
