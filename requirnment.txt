@@ -16,6 +16,8 @@ pypdf>=5.0.0
 docx2txt>=0.8             
 tiktoken>=0.7.0           # <--- Fixed the spelling here with a 'k'
 
+
 # --- Environment & Utilities ---
-python-dotenv>=1.0.1      
+python-dotenv>=1.0.1
 requests>=2.32.0
+fastapi
