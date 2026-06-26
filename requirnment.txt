@@ -30,3 +30,9 @@ langchain-chroma
 langchain-huggingface>=0.1.0
 huggingface_hub>=0.24.0
 langchain-mistralai
+
+# --- Document Loaders & Text Splitting ---
+pypdf>=5.0.0              
+docx2txt>=0.8             
+tiktoken>=0.7.0           
+langchain-pymupdf4llm
